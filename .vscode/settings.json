@@ -1,0 +1,9 @@
+{
+  "cSpell.language": "ru-RU,en-US",
+  "cSpell.dictionaries": ["russian", "en_us"],
+  "cSpell.enabledLanguageIds": ["plaintext","markdown","latex","tex","bibtex"],
+  "cSpell.ignorePaths": ["out/**","**/*.aux","**/*.bbl","**/*.bcf","**/*.blg","**/*.log"],
+
+  "latex-workshop.latex.outDir": "out",
+  "latex-workshop.latex.autoBuild.run": "never"
+}
