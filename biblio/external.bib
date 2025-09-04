@@ -1,4 +1,151 @@
 % ГОСТ Р 7.0.11-2011, Приложение Б, Книги
+@article{10.14778/3421424.3421432,
+author = {Yang, Zongheng and Kamsetty, Amog and Luan, Sifei and Liang, Eric and Duan, Yan and Chen, Xi and Stoica, Ion},
+title = {NeuroCard: one cardinality estimator for all tables},
+year = {2020},
+issue_date = {September 2020},
+publisher = {VLDB Endowment},
+volume = {14},
+number = {1},
+issn = {2150-8097},
+url = {https://doi.org/10.14778/3421424.3421432},
+doi = {10.14778/3421424.3421432},
+abstract = {Query optimizers rely on accurate cardinality estimates to produce good execution plans. Despite decades of research, existing cardinality estimators are inaccurate for complex queries, due to making lossy modeling assumptions and not capturing inter-table correlations. In this work, we show that it is possible to learn the correlations across all tables in a database without any independence assumptions. We present NeuroCard, a join cardinality estimator that builds a single neural density estimator over an entire database. Leveraging join sampling and modern deep autoregressive models, NeuroCard makes no inter-table or inter-column independence assumptions in its probabilistic modeling. NeuroCard achieves orders of magnitude higher accuracy than the best prior methods (a new state-of-the-art result of 8.5x maximum error on JOB-light), scales to dozens of tables, while being compact in space (several MBs) and efficient to construct or update (seconds to minutes).},
+journal = {Proc. VLDB Endow.},
+month = sep,
+pages = {61–73},
+numpages = {13}
+}
+
+@article{10.14778/3368289.3368294,
+author = {Yang, Zongheng and Liang, Eric and Kamsetty, Amog and Wu, Chenggang and Duan, Yan and Chen, Xi and Abbeel, Pieter and Hellerstein, Joseph M. and Krishnan, Sanjay and Stoica, Ion},
+title = {Deep unsupervised cardinality estimation},
+year = {2019},
+issue_date = {November 2019},
+publisher = {VLDB Endowment},
+volume = {13},
+number = {3},
+issn = {2150-8097},
+url = {https://doi.org/10.14778/3368289.3368294},
+doi = {10.14778/3368289.3368294},
+abstract = {Cardinality estimation has long been grounded in statistical tools for density estimation. To capture the rich multivariate distributions of relational tables, we propose the use of a new type of high-capacity statistical model: deep autoregressive models. However, direct application of these models leads to a limited estimator that is prohibitively expensive to evaluate for range or wildcard predicates. To produce a truly usable estimator, we develop a Monte Carlo integration scheme on top of autoregressive models that can efficiently handle range queries with dozens of dimensions or more.Like classical synopses, our estimator summarizes the data without supervision. Unlike previous solutions, we approximate the joint data distribution without any independence assumptions. Evaluated on real-world datasets and compared against real systems and dominant families of techniques, our estimator achieves single-digit multiplicative error at tail, an up to 90x accuracy improvement over the second best method, and is space- and runtime-efficient.},
+journal = {Proc. VLDB Endow.},
+month = nov,
+pages = {279–292},
+numpages = {14}
+}
+
+@article{10.1145/376284.375686,
+author = {Bruno, Nicolas and Chaudhuri, Surajit and Gravano, Luis},
+title = {STHoles: a multidimensional workload-aware histogram},
+year = {2001},
+issue_date = {June 2001},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {30},
+number = {2},
+issn = {0163-5808},
+url = {https://doi.org/10.1145/376284.375686},
+doi = {10.1145/376284.375686},
+abstract = {Attributes of a relation are not typically independent. Multidimensional histograms can be an effective tool for accurate multiattribute query selectivity estimation. In this paper, we introduce STHoles, a “workload-aware” histogram that allows bucket nesting to capture data regions with reasonably uniform tuple density. STHoles histograms are built without examining the data sets, but rather by just analyzing query results. Buckets are allocated where needed the most as indicated by the workload, which leads to accurate query selectivity estimations. Our extensive experiments demonstrate that STHoles histograms consistently produce good selectivity estimates across synthetic and real-world data sets and across query workloads, and, in many cases, outperform the best multidimensional histogram techniques that require access to and processing of the full data sets during histogram construction.},
+journal = {SIGMOD Rec.},
+month = may,
+pages = {211–222},
+numpages = {12}
+}
+
+
+
+@inproceedings{10.5555/645923.673638,
+author = {Poosala, Viswanath and Ioannidis, Yannis E.},
+title = {Selectivity Estimation Without the Attribute Value Independence Assumption},
+year = {1997},
+isbn = {1558604707},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+booktitle = {Proceedings of the 23rd International Conference on Very Large Data Bases},
+pages = {486–495},
+numpages = {10},
+series = {VLDB '97}
+}
+
+@inproceedings{10.1145/233269.233342,
+author = {Poosala, Viswanath and Haas, Peter J. and Ioannidis, Yannis E. and Shekita, Eugene J.},
+title = {Improved histograms for selectivity estimation of range predicates},
+year = {1996},
+isbn = {0897917944},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/233269.233342},
+doi = {10.1145/233269.233342},
+abstract = {Many commercial database systems maintain histograms to summarize the contents of relations and permit efficient estimation of query result sizes and access plan costs. Although several types of histograms have been proposed in the past, there has never been a systematic study of all histogram aspects, the available choices for each aspect, and the impact of such choices on histogram effectiveness. In this paper, we provide a taxonomy of histograms that captures all previously proposed histogram types and indicates many new possibilities. We introduce novel choices for several of the taxonomy dimensions, and derive new histogram types by combining choices in effective ways. We also show how sampling techniques can be used to reduce the cost of histogram construction. Finally, we present results from an empirical study of the proposed histogram types used in selectivity estimation of range predicates and identify the histogram types that have the best overall performance.},
+booktitle = {Proceedings of the 1996 ACM SIGMOD International Conference on Management of Data},
+pages = {294–305},
+numpages = {12},
+location = {Montreal, Quebec, Canada},
+series = {SIGMOD '96}
+}
+
+@article{10.1145/235968.233342,
+author = {Poosala, Viswanath and Haas, Peter J. and Ioannidis, Yannis E. and Shekita, Eugene J.},
+title = {Improved histograms for selectivity estimation of range predicates},
+year = {1996},
+issue_date = {June 1996},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {25},
+number = {2},
+issn = {0163-5808},
+url = {https://doi.org/10.1145/235968.233342},
+doi = {10.1145/235968.233342},
+abstract = {Many commercial database systems maintain histograms to summarize the contents of relations and permit efficient estimation of query result sizes and access plan costs. Although several types of histograms have been proposed in the past, there has never been a systematic study of all histogram aspects, the available choices for each aspect, and the impact of such choices on histogram effectiveness. In this paper, we provide a taxonomy of histograms that captures all previously proposed histogram types and indicates many new possibilities. We introduce novel choices for several of the taxonomy dimensions, and derive new histogram types by combining choices in effective ways. We also show how sampling techniques can be used to reduce the cost of histogram construction. Finally, we present results from an empirical study of the proposed histogram types used in selectivity estimation of range predicates and identify the histogram types that have the best overall performance.},
+journal = {SIGMOD Rec.},
+month = jun,
+pages = {294–305},
+numpages = {12}
+}
+
+
+
+@article{10.1007/s00778-003-0090-4,
+author = {Gunopulos, Dimitrios and Kollios, George and Tsotras, J. and Domeniconi, Carlotta},
+title = {Selectivity estimators for multidimensional range queries over real attributes},
+year = {2005},
+issue_date = {April 2005},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+volume = {14},
+number = {2},
+issn = {1066-8888},
+url = {https://doi.org/10.1007/s00778-003-0090-4},
+doi = {10.1007/s00778-003-0090-4},
+abstract = {Estimating the selectivity of multidimensional range queries over real valued attributes has significant applications in data exploration and database query optimization. In this paper, we consider the following problem: given a table of d attributes whose domain is the real numbers and a query that specifies a range in each dimension, find a good approximation of the number of records in the table that satisfy the query. The simplest approach to tackle this problem is to assume that the attributes are independent. More accurate estimators try to capture the joint data distribution of the attributes. In databases, such estimators include the construction of multidimensional histograms, random sampling, or the wavelet transform. In statistics, kernel estimation techniques are being used. Many traditional approaches assume that attribute values come from discrete, finite domains, where different values have high frequencies. However, for many novel applications (as in temporal, spatial, and multimedia databases) attribute values come from the infinite domain of real numbers. Consequently, each value appears very infrequently, a characteristic that affects the behavior and effectiveness of the estimator. Moreover, real-life data exhibit attribute correlations that also affect the estimator. We present a new histogram technique that is designed to approximate the density of multidimensional datasets with real attributes. Our technique defines buckets of variable size and allows the buckets to overlap. The size of the cells is based on the local density of the data. The use of overlapping buckets allows a more compact approximation of the data distribution. We also show how to generalize kernel density estimators and how to apply them to the multidimensional query approximation problem. Finally, we compare the accuracy of the proposed techniques with existing techniques using real and synthetic datasets. The experimental results show that the proposed techniques behave more accurately in high dimensionalities than previous approaches.},
+journal = {The VLDB Journal},
+month = apr,
+pages = {137–154},
+numpages = {18}
+}
+
+@article{10.1145/971697.602294,
+author = {Piatetsky-Shapiro, Gregory and Connell, Charles},
+title = {Accurate estimation of the number of tuples satisfying a condition},
+year = {1984},
+issue_date = {June 1984},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {14},
+number = {2},
+issn = {0163-5808},
+url = {https://doi.org/10.1145/971697.602294},
+doi = {10.1145/971697.602294},
+abstract = {We present a new method for estimating the number of tuples satisfying a condition of the type attribute rel constant, where rel is one of "=", "&gt;", "&lt;", "≥", "≤". Our method gives highly accurate, yet easy to compute, estimates. We store information about attribute values as a list of distribution steps (histograms where buckets, instead of having equal width, have equal height). These distribution steps provide an upper bound on the error when estimating the number of tuples satisfying a condition. The estimation error can be arbitrarily reduced by increasing the number of steps. We analyze desirable conditions that such estimates should satisfy. Based on the distribution steps, we derive a set of estimation formulas which minimize the worst-case error. We also present another set of formulas which reduce the average-case error. Finally, we show how to use sampling to compute a close approximation of the distribution steps very quickly. The major applications of our method are in query optimization and in answering statistical queries.},
+journal = {SIGMOD Rec.},
+month = jun,
+pages = {256–276},
+numpages = {21}
+}
+
+
 
 
 
