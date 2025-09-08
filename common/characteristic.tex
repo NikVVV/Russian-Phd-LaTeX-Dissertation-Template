@@ -70,10 +70,9 @@
 
 \ifnumequal{\value{bibliosel}}{1}
 {%%% Встроенная реализация с загрузкой файла через движок bibtex8. (При желании, внутри можно использовать обычные ссылки, наподобие `\cite{vakbib1,vakbib2}`).
-    {\publications} Основные результаты по теме диссертации изложены
-    в~XX~печатных изданиях,
-    X из которых изданы в журналах, рекомендованных ВАК,
-    X "--- в тезисах докладов.
+    \nocite{vasilenko2024acm}%vak
+    \nocite{vasilenko2025trainingfreequeryoptimizationllmbased}%patent
+    {\publications} Основные результаты по теме диссертации отражены в двух публикациях уровня Q1: одна опубликована, по второй получено уведомление о принятии. Приняты два доклада на конференцию «ЗОНТ-2025». Получен акт о внедрении результатов исследования.
 }%
 {%%% Реализация пакетом biblatex через движок biber
     \begin{refsection}[bl-author, bl-registered]
@@ -138,11 +137,10 @@
         % Процитированные здесь работы:
         %  * попадают в авторскую библиографию, при usefootcite==0 и стиле `\insertbiblioauthorimportant`.
         %  * ни на что не влияют в противном случае
-        \nocite{vakbib2}%vak
-        \nocite{patbib1}%patent
-        \nocite{progbib1}%program
-        \nocite{bib1}%other
-        \nocite{confbib1}%conf
+
+        %\nocite{progbib1}%program
+        %\nocite{bib1}%other
+        %\nocite{confbib1}%conf
     \end{refsection}%
         %
         % Всё, что вне этих двух refsection, это refsection=0,
