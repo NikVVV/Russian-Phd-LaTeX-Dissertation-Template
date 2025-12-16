@@ -605,15 +605,8 @@ sorting=none,% настройка сортировки списка литера
       \printbibliography[heading=nobibheading,env=counter,keyword=bibliofull,section=0]
     }{}
 }
-\newcommand*{\insertbiblioauthor}{%
-  \begin{refsection}[biblio/author.bib,biblio/registered.bib]%
-    \nocite{*}% или перечисли ключи вручную
-    \printbibliography[
-      heading=pubgroup,  % оставь свой заголовок, если он определён
-      title=\bibtitleauthor,
-      resetnumbers=true  % на всякий случай
-    ]%
-  \end{refsection}%
+\newcommand*{\insertbiblioauthor}{
+    \printbibliography[heading=pubgroup, section=0, filter=papersregistered, title=\bibtitleauthor]
 }
 \newcommand*{\insertbiblioauthorimportant}{
     \printbibliography[heading=pubgroup, section=2, filter=papersregistered, title=\bibtitleauthorimportant]
