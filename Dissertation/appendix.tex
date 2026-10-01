@@ -1,12 +1,15 @@
 \chapter{Дополнительные таблицы}\label{app:A}
-
+\edef\tablesbeforeappendix{\number\value{table}}
+\renewcommand{\thetable}{%
+  А.\number\numexpr\value{table}-\tablesbeforeappendix\relax}
 \begin{table}[htbp]
     \captionsetup{justification=centering}
     \centering{
-        \caption{\label{tab:results_acm_tpch}Результаты для TPC-H 10GB}
+        \caption{Результаты для TPC-H 10GB}
+          \label{tab:results_acm_tpch}
 \begin{tabular}{lll}
 \toprule
-\textbf{sql} & \textbf{default} & \textbf{acm} \\
+\textbf{Номер запроса} & \textbf{Стандартное время, мс} & \textbf{Время работы с АСМ, мс} \\
 \midrule
 1 & 128235 & 127906 \\
 2 & 1325 & 1423 \\
@@ -35,12 +38,15 @@
     }
 \end{table}
 
-\chapter{Акт внедрения}\label{app:B}
+
+
+\chapter{Акт внедрения}\label{app:C}
+
 \begin{figure}[h]
-  \includegraphics[width=0.75\linewidth]{images/act.pdf}
+  \includegraphics[width=0.75\linewidth]{images/act_vnedreniya.pdf}
 \end{figure}
 
-\chapter{Свидетельство о регистрации программы для ЭВМ}\label{app:C}
+\chapter{Свидетельство о регистрации программы для ЭВМ}\label{app:D}
 \begin{figure}[h]
   \includegraphics[width=0.75\linewidth]{images/evm.pdf}
 \end{figure}
